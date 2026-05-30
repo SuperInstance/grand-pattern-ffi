@@ -1,0 +1,16 @@
+[package]
+name = "grand-pattern-ffi"
+version = "0.1.0"
+edition = "2021"
+description = "C FFI bindings — use the Grand Pattern from C, C++, Python ctypes, Ruby FFI, Lua, or any language with C interop"
+license = "MIT"
+
+[lib]
+name = "grand_pattern"
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
